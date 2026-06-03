@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamline Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <div class="player-card">
+            <div class="track-art" id="track-art">🎵</div>
+            
+            <div class="track-details">
+                <h2 id="track-title">Song Title</h2>
+                <h3 id="track-artist">Artist Name</h3>
+            </div>
+
+            <div class="progress-container">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress-bar" min="0" max="100" value="0">
+                <span id="total-duration">0:00</span>
+            </div>
+
+            <div class="controls">
+                <button id="prev-btn" class="ctrl-btn">⏮</button>
+                <button id="play-btn" class="ctrl-btn main-btn">▶</button>
+                <button id="next-btn" class="ctrl-btn">⏭</button>
+            </div>
+
+            <div class="volume-container">
+                <span>🔈</span>
+                <input type="range" id="volume-slider" min="0" max="100" value="80">
+                <span>🔊</span>
+            </div>
+        </div>
+
+        <div class="playlist-card">
+            <h3>Queue Next</h3>
+            <ul id="playlist-queue"></ul>
+        </div>
+    </div>
+
+    <!-- FIXED: Added a reliable default stream source here -->
+<audio id="audio-engine"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
